@@ -3,6 +3,7 @@
 set nocompatible
 set langmenu=en_US
 set showcmd
+set mouse=a
 
 let $LANG = 'en_US'
 
