@@ -1,14 +1,17 @@
 " Basic setup -----------------------------------
-" modern mode
+
+" modern mode, is default in neovim
 set nocompatible
+filetype plugin on
+syntax enable
+
 set langmenu=en_US
 set showcmd
-set mouse=a
 
 let $LANG = 'en_US'
 
 " Load plugins
-call plug#begin("~/AppData/Local/nvim/plugged")
+call plug#begin("~/.vim/plugged")
   Plug 'joshdick/onedark.vim'
   Plug 'itchyny/lightline.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -20,14 +23,11 @@ call plug#begin("~/AppData/Local/nvim/plugged")
   Plug 'sheerun/vim-polyglot'
 call plug#end()
 
-filetype plugin on
-
 if (has("termguicolors"))
  set termguicolors
 endif
 
 colorscheme onedark
-syntax enable
 
 " tab-completion for subfolders for :find
 set path=.,**
